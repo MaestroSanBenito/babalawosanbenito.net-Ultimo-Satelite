@@ -7,13 +7,34 @@
     <meta name="description" content="Maestro Nigromante Nivel +100. Especialista en intervención existencial y Alta Hechicería con formación en Francia. Descubre la trayectoria del Maestro San Benito.">
     <link rel="canonical" href="https://www.babalawosanbenito.com/sobre-maestro-san-benito">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DQ7E22TN6X"></script>
+    <!-- Configuración de Cookies y Analytics -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-DQ7E22TN6X');
+        function loadAnalytics() {
+            var script = document.createElement('script');
+            script.src = "https://www.googletagmanager.com/gtag/js?id=G-DQ7E22TN6X";
+            script.async = true;
+            document.head.appendChild(script);
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DQ7E22TN6X');
+        }
+        function acceptCookies() {
+            localStorage.setItem('consent', 'accepted');
+            document.getElementById('cookie-banner').style.display = 'none';
+            loadAnalytics();
+        }
+        function declineCookies() {
+            localStorage.setItem('consent', 'declined');
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+        window.onload = function() {
+            if(!localStorage.getItem('consent')) {
+                document.getElementById('cookie-banner').style.display = 'block';
+            } else if(localStorage.getItem('consent') === 'accepted') {
+                loadAnalytics();
+            }
+        };
     </script>
 
     <!-- Schema JSON-LD -->
@@ -45,6 +66,9 @@
         .pillar-item { padding: 1rem; background: #f9f9f9; border-left: 4px solid #000; }
         footer { text-align: center; padding: 2rem; font-size: 0.85rem; color: #888; }
         a { color: #000; text-decoration: underline; }
+        /* Estilos Banner Cookies */
+        #cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background: #000; color: #fff; padding: 1.5rem; text-align: center; z-index: 9999; display: none; font-size: 0.9rem; }
+        #cookie-banner button { background: #fff; border: none; padding: 0.6rem 1.2rem; cursor: pointer; margin: 0 0.5rem; font-weight: bold; border-radius: 4px; color: #000; }
     </style>
 </head>
 <body>
@@ -54,14 +78,12 @@
     </header>
 
     <main>
-        <!-- Introducción -->
         <article>
             <p>"Cambiar la vida de las personas no es un oficio, es un destino. La verdadera hechicería no es un ruego, es una transmutación de la realidad donde la voluntad se impone sobre el caos."</p>
             <p>Soy Maestro Nigromante Nivel +100, el grado máximo de jerarquía dentro de la tradición antigua. Mi formación se cimentó en la Sede Principal de Lenguas Romances en Saint-Germain-des-Prés, Francia. Bajo el rigor del latín y la tradición hagiográfica, perfeccioné el Don de la Videncia y la Sanación de Rastro, consolidando un búnker de resultados para quienes buscan <a href="https://www.babalawosanbenito.com/">servicios de brujería profesional</a>.</p>
             <p>Como integrante de la Logia Nigromante, mi labor se centra en la <a href="https://www.babalawosanbenito.com/quien-soy-maestro-nigromante">Alta Hechicería y Brujería Especializada</a>, ayudando a mis consultantes a lograr cambios reales mediante una <a href="https://www.babalawosanbenito.com/metodologia">metodología de intervención existencial</a> diseñada para eliminar bloqueos, mal de ojo, entierros y cualquier interferencia energética.</p>
         </article>
 
-        <!-- Ingeniería y Resultados -->
         <article>
             <h2>La Nigromancia como Ingeniería de Resultados</h2>
             <p>La intervención existencial de alto nivel no es una práctica sujeta a la interpretación subjetiva, sino una disciplina de <strong>precisión técnica</strong>. En la <a href="https://www.babalawosanbenito.com/">Logia Nigromante</a>, definimos nuestra praxis no como un acto de fe, sino como una <em>reconfiguración de la realidad</em>. Mi ejercicio profesional se aleja de cualquier método comercial o "express", enfocándose exclusivamente en la <strong>soberanía existencial</strong> del consultante.</p>
@@ -70,7 +92,6 @@
             <p>La <a href="https://www.babalawosanbenito.com/sobre-maestro-san-benito">trayectoria del Maestro San Benito</a> se ha consolidado mediante la resolución de crisis metafísicas que la lógica convencional etiqueta erróneamente como azar. Cada <a href="https://www.babalawosanbenito.com/quien-soy-maestro-nigromante">trabajo de brujería técnica</a> busca un objetivo medible: la transmutación del entorno del consultante mediante la <strong>Ingeniería de Resultados</strong>.</p>
         </article>
 
-        <!-- Pilares Técnicos -->
         <article>
             <h2>Arquitectura de la Intervención y Pilares Técnicos</h2>
             <p>La eficacia de una intervención nigromántica es el resultado de la aplicación rigurosa de cuatro disciplinas fundamentales:</p>
@@ -94,14 +115,12 @@
             </div>
         </article>
 
-        <!-- Enfoque Científico -->
         <article>
             <h2>La Ingeniería de la Realidad: Un Enfoque Científico-Metafísico</h2>
             <p>La realidad es un sistema complejo gobernado por leyes energéticas. Cuando un consultante acude a la <a href="https://www.babalawosanbenito.com/">Logia Nigromante</a>, no buscamos un milagro; buscamos una optimización de sus variables existenciales. La <strong>Hechicería de Mando</strong> actúa como un sistema de control que reduce la entropía, estabilizando el entorno para que tus objetivos tengan terreno fértil.</p>
             <p>Mis servicios de <a href="https://www.babalawosanbenito.com/sobre-maestro-san-benito">Alta Hechicería y Brujería Especializada</a> no son un complemento a tu vida; son el fundamento operativo sobre el cual se sostiene tu éxito.</p>
         </article>
 
-        <!-- Conclusión -->
         <article>
             <h2>La Tradición de Saint-Germain y Soberanía Existencial</h2>
             <p>La Nigromancia Operativa que ejerzo implica que cada trabajo sigue un protocolo de ejecución que respeta leyes inalterables. Como <a href="https://www.babalawosanbenito.com/quien-soy-maestro-nigromante">Maestro Nigromante</a>, mi labor es proporcionar la claridad técnica necesaria para ejecutar la acción correcta. La Nigromancia es el arte de la <a href="https://www.babalawosanbenito.com/quien-soy-maestro-nigromante">soberanía existencial</a>: el derecho de reclamar tu propio destino.</p>
@@ -112,6 +131,14 @@
     <footer>
         <p>&copy; 2026 Maestro San Benito. Logia Nigromante.</p>
     </footer>
+
+    <!-- Banner de Cookies -->
+    <div id="cookie-banner">
+        Utilizamos cookies de análisis técnico para mejorar la experiencia de navegación en esta consultoría. Al continuar, aceptas nuestra política de privacidad.
+        <br>
+        <button onclick="acceptCookies()">Aceptar</button>
+        <button onclick="declineCookies()">Declinar</button>
+    </div>
 
 </body>
 </html>
