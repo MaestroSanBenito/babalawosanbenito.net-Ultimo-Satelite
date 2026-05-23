@@ -54,18 +54,23 @@
 
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.7; color: #2d2d2d; margin: 0; padding: 0; background-color: #fafafa; }
+        
+        /* HEADER CORREGIDO: Forzamos color blanco en h1 */
         header { background: #0a0a0a; color: #e0e0e0; padding: 3rem 1rem; text-align: center; border-bottom: 2px solid #333; }
+        header h1 { color: #fff !important; text-transform: uppercase; letter-spacing: 1px; margin: 0; }
+        
         main { max-width: 800px; margin: 2rem auto; padding: 2rem; background: #fff; border: 1px solid #eaeaea; }
-        h1, h2 { color: #000; text-transform: uppercase; letter-spacing: 1px; }
-        h2 { border-bottom: 2px solid #0a0a0a; display: inline-block; padding-bottom: 5px; margin-top: 2rem; }
+        
+        /* Títulos negros */
+        h2 { color: #000; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid #0a0a0a; display: inline-block; padding-bottom: 5px; margin-top: 2rem; }
+        
         .box { padding: 1.5rem; background: #f9f9f9; border-left: 5px solid #000; margin: 1.5rem 0; }
         footer { text-align: center; padding: 2rem; font-size: 0.85rem; color: #888; }
-        a { 
-    color: #a00000; 
-    text-decoration: underline; 
-    font-weight: bold; 
-}
-a:hover { color: #ff0000; }
+        
+        /* ENLACES CORREGIDOS: Rojo para contraste */
+        a { color: #a00000; text-decoration: underline; font-weight: bold; }
+        a:hover { color: #ff0000; }
+        
         #cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background: #000; color: #fff; padding: 1.5rem; text-align: center; z-index: 9999; display: none; font-size: 0.9rem; }
         #cookie-banner button { background: #fff; border: none; padding: 0.6rem 1.2rem; cursor: pointer; margin: 0 0.5rem; font-weight: bold; border-radius: 4px; color: #000; }
     </style>
