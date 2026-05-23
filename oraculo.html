@@ -3,17 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oráculo: Presente y Futuro | Maestro San Benito</title>
-    <meta name="description" content="Protocolo de Diagnóstico y Consultoría de Alta Especialidad (Clase +100). Auditoría existencial y detección de interferencias mediante sistemas tradicionales de Ifá.">
-    <link rel="canonical" href="https://www.babalawosanbenito.com/diagnostico-oraculo">
+    <title>Oráculo: Análisis de Destino | Maestro San Benito</title>
+    <meta name="description" content="Protocolo de Videncia y Diagnóstico (Clase +100). Auditoría de alta fidelidad mediante sistemas nigromantes para la toma de decisiones críticas.">
+    <link rel="canonical" href="https://www.babalawosanbenito.com/protocolos-videncia-nigromante">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DQ7E22TN6X"></script>
+    <!-- Configuración de Cookies y Analytics -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-DQ7E22TN6X');
+        function loadAnalytics() {
+            var script = document.createElement('script');
+            script.src = "https://www.googletagmanager.com/gtag/js?id=G-DQ7E22TN6X";
+            script.async = true;
+            document.head.appendChild(script);
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DQ7E22TN6X');
+        }
+        function acceptCookies() {
+            localStorage.setItem('consent', 'accepted');
+            document.getElementById('cookie-banner').style.display = 'none';
+            loadAnalytics();
+        }
+        function declineCookies() {
+            localStorage.setItem('consent', 'declined');
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+        window.onload = function() {
+            if(!localStorage.getItem('consent')) {
+                document.getElementById('cookie-banner').style.display = 'block';
+            } else if(localStorage.getItem('consent') === 'accepted') {
+                loadAnalytics();
+            }
+        };
     </script>
 
     <!-- Schema JSON-LD para Consultoría Profesional -->
@@ -44,6 +65,9 @@
         .item-tech { padding: 1.5rem; background: #f9f9f9; border: 1px solid #e0e0e0; }
         footer { text-align: center; padding: 2rem; font-size: 0.8rem; color: #666; }
         a { color: #000; text-decoration: underline; font-weight: bold; }
+        /* Estilos Banner Cookies */
+        #cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background: #000; color: #fff; padding: 1.5rem; text-align: center; z-index: 9999; display: none; font-size: 0.9rem; }
+        #cookie-banner button { background: #fff; border: none; padding: 0.6rem 1.2rem; cursor: pointer; margin: 0 0.5rem; font-weight: bold; border-radius: 4px; color: #000; }
     </style>
 </head>
 <body>
@@ -92,6 +116,14 @@
     <footer>
         <p>&copy; 2026 Maestro San Benito. Logia Nigromante.</p>
     </footer>
+
+    <!-- Banner de Cookies -->
+    <div id="cookie-banner">
+        Utilizamos cookies de análisis técnico para mejorar la experiencia de navegación en esta consultoría. Al continuar, aceptas nuestra política de privacidad.
+        <br>
+        <button onclick="acceptCookies()">Aceptar</button>
+        <button onclick="declineCookies()">Declinar</button>
+    </div>
 
 </body>
 </html>
