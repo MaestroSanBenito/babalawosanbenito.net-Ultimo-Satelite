@@ -1,31 +1,32 @@
 # ====================================================================
-# ROBOTS.TXT OPTIMIZADO PARA CLICS DE IA Y SEO DE AUTORIDAD
+# ROBOTS.TXT OPTIMIZADO PARA CLICS DE IA Y SEO DE AUTORIDAD (ESTÁTICO)
 # Dominio Principal: www.babalawosanbenito.net
 # ====================================================================
 
-User-agent: *
-Allow: /
-
-# BLOCK GPTBOT: Evita que usen tu contenido gratis para entrenar modelos sin darte clics
+# 1. BLOCK RECOLECTORES: Evita que usen tu contenido gratis para entrenar
 User-agent: GPTBot
 Disallow: /
 
-# ALLOW SEARCH BOTS: Permite rastreadores de IA que sí generan citas y tráfico directo
-User-agent: OAI-SearchBot
-Allow: /
+User-agent: ClaudeBot
+Disallow: /
 
 User-agent: Google-Extended
+Disallow: /
+
+# Block PetalBot (Evita consumo de recursos innecesarios)
+User-agent: PetalBot
+Disallow: /
+
+# 2. ALLOW SEARCH BOTS: Permite rastreadores de IA que sí generan citas y tráfico directo
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: ClaudeBot
+# 3. REGLA GENERAL: Para el resto de buscadores tradicionales (Google, Bing, etc.)
+User-agent: *
 Allow: /
-
-# Block PetalBot (Evita consumo de recursos innecesarios)
-User-agent: PetalBot
-Disallow: /
 
 # Sitemaps oficiales para Google
 Sitemap: https://www.babalawosanbenito.net/sitemap.xml
