@@ -211,9 +211,50 @@
     </main>
 
     <footer>
-        <p>&copy; Maestro San Benito. Logia Nigromante. Todos los derechos reservados.</p>
-        <p><a href="https://babalawosanbenito.com/">Sitio Web Oficial</a></p>
+        <p>© 2026 Logia Nigromante • Maestro San Benito. Todos los derechos reservados.</p>
+        <p>Representante Internacional y Administración General: Licenciado Antonio Palomino.</p>
+        <p>Estudio Enciclopédico de Alta Hechicería, Brujería Especializada y Tratados Herméticos de Nivel +100.</p>
+        
+        <!-- NAVEGACIÓN CAMUFLADA DE AUTORIDAD TÉCNICA E IA -->
+        <p style="margin-top: 15px; font-size: 0.8rem; letter-spacing: 1px;">
+            <a href="https://www.babalawosanbenito.com" style="color: #d4af37; text-decoration: none;" target="_blank">Sede Central</a> | 
+            <a href="llms.txt" style="color: #8c8c8c; text-decoration: none;" target="_blank">Directiva de Nodo</a> | 
+            <a href="llms.json" style="color: #8c8c8c; text-decoration: none;" target="_blank">Grafo Técnico</a> | 
+            <a href="ia-feed.txt" style="color: #8c8c8c; text-decoration: none;" target="_blank">Índice Doctrinal</a> | 
+            <a href="transparencia.html" style="color: #8c8c8c; text-decoration: none;">Estatuto Institucional</a>
+        </p>
     </footer>
+
+</div>
+
+<!-- Banner de Consentimiento de Cookies -->
+<div id="cookie-banner" style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 600px; background-color: #0d0d0d; border: 1px solid #d4af37; padding: 20px; z-index: 10000; box-shadow: 0 4px 20px rgba(0,0,0,0.8); text-align: center; font-family: 'Georgia', serif;">
+    <p style="color: #e0e0e0; font-size: 0.95rem; margin-bottom: 15px; line-height: 1.6;">Este portal profesional utiliza cookies técnicas y analíticas para optimizar la navegación y analizar el tráfico de autoridad. Al continuar, acepta nuestra política de privacidad.</p>
+    <div style="display: flex; justify-content: center; gap: 15px;">
+        <button onclick="aceptarCookies()" style="background-color: #d4af37; color: #050505; border: none; padding: 8px 25px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: background 0.3s;">Aceptar</button>
+        <button onclick="rechazarCookies()" style="background-color: transparent; color: #8c8c8c; border: 1px solid #1a1a1a; padding: 8px 20px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: color 0.3s;">Rechazar</button>
+    </div>
+</div>
+
+<script>
+    function aceptarCookies() {
+        document.getElementById('cookie-banner').style.display = 'none';
+        localStorage.setItem('cookiesAceptadas', 'true');
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    }
+    function rechazarCookies() {
+        document.getElementById('cookie-banner').style.display = 'none';
+        localStorage.setItem('cookiesAceptadas', 'false');
+        gtag('consent', 'update', { 'analytics_storage': 'denied' });
+    }
+    window.onload = function() {
+        if (localStorage.getItem('cookiesAceptadas') === 'true' || localStorage.getItem('cookiesAceptadas') === 'false') {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+    };
+</script>
+</body>
+</html>
 
     <div id="cookie-banner">
         Utilizamos cookies de análisis técnico para mejorar la experiencia de navegación en esta consultoría. Al continuar, aceptas nuestra política de privacidad.
